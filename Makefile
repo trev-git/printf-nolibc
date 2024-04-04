@@ -3,7 +3,7 @@ AS=as
 CFLAGS=-W -Wall -Wextra -ffreestanding -nostdlib -fno-builtin -fno-stack-protector
 BIN_DIR=bin
 
-$(BIN_DIR)/app: $(BIN_DIR)/start.o $(BIN_DIR)/main.o $(BIN_DIR)/io.o
+$(BIN_DIR)/main: $(BIN_DIR)/start.o $(BIN_DIR)/main.o $(BIN_DIR)/io.o
 	mkdir -p bin
 	$(CC) $(CFLAGS) -g $^ -o $@
 
